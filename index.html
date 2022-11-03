@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week 4 Challenge</title>
+    <title>Javascript Quiz</title>
     <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
-
-
-
+      <div id="highscore-link">
+        <a href="scores.html">View Highscores</a>
+      </div>
+        <h1 class="quiz-title">Javascript Quiz</h1>
+        <div id="time"></div>
+        <div id="container">
+        <div id="questions">
+        <ol id="choices"></ol>
+        <p>A simple yet effective quiz to put your Javascript knowledge to the test!</p>
+        <p class="rules"> *Each wrong answer will deduct 10 seconds from your total time*</p>
+    <div id="start-button">
+        <button>Start Quiz!</button>
+    </div>
+    </div>
+        </div>
     
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="scripts.js"></script>
   </body>
 </html>
