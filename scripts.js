@@ -30,6 +30,69 @@ var questions = [
         choices: ["pop()", "push()", "addTo()", "add()"],
         answer: "push()"
     }
-
 ];
 
+var begin = document.querySelector("#startTime");
+var qBox = document.querySelector("#qBox");
+var firstQuestion = 0;
+var currentQuestion = 0;
+var currentTime = document.querySelector("#currentTime");
+var scores = 0;
+var ulCreate = document.createElement("ul");
+
+
+begin.addEventListener("click", function () {
+    if (firstQuestion = 0) {
+        firstQuestion = setInterval(function () {
+        });
+}
+    createQuestion (currentQuestion);
+})
+
+
+function createQuestion (currentQuestion) {
+    ulCreate.innerHTML = "";
+   
+    for (var i = 0; i < questions.length; i++) {
+        var userQuestion = questions[currentQuestion].title;
+        var userChoices = questions[currentQuestion].choices;
+        qBox.textContent = userQuestion;
+    }
+
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        qBox.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (determine));
+    })
+}
+
+function determine(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+       
+        if (element.textContent == questions[currentQuestion].answer) {
+            scores++;
+            createDiv.textContent = "Correct!";
+        }
+         else {
+            createDiv.textContent = "Incorrect";
+        }
+    }
+    
+    currentQuestion++;
+
+    if (currentQuestion >= questions.length) {
+        createDiv.textContent = "End of quiz!" + " " + "You got  " + scores + "/" + questions.length + " Correct!";
+    } 
+    
+    else {
+        createQuestion(currentQuestion);
+    }
+}
+
+//Add initials input and score box.

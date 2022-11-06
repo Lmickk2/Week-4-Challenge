@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Javascript Quiz</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
 
-  <body>
-      <div id="highscore-link">
-        <a href="scores.html">View Highscores</a>
-      </div>
-        <h1 class="quiz-title">Javascript Quiz</h1>
-        <div id="time"></div>
-        <div id="container">
-        <div id="questions">
-        <ol id="choices"></ol>
-        <p>A simple yet effective quiz to put your Javascript knowledge to the test!</p>
-        <p class="rules"> *Each wrong answer will deduct 10 seconds from your total time*</p>
-    <div id="start-button">
-        <button>Start Quiz!</button>
-    </div>
-    </div>
+<body>
+    <a href="scores.html">View Highscores</a>
+    <div id="wrapper">
+        <div id="currentTime"></div>
+        <div id="qBox">
+            <h1>Javascript Quiz</h1>
+            <p>*Answer the following Javascript questions to the best of your ability. Good Luck!</p>
+            <p class = "rules">Incorrect answers will deduct 10 seconds from your final score</p>
+            <button id="startTime">Start</button>
         </div>
-    
-
-
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="scripts.js"></script>
-  </body>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
 </html>
